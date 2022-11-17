@@ -1,13 +1,15 @@
 
 package com.mycompany.javaswing;
+import java.awt.Color;
 import javax.swing.ImageIcon;
 import java.net.URL;
 import javax.swing.JFrame;
 
 
 public class JFrameClass {
-
-    public void InitializingJFrame(){
+    
+    public void initializingJFrame(){
+    
         
        // creating new components using java swing library
        
@@ -32,22 +34,25 @@ public class JFrameClass {
     
     //trying another method with url sources
     
-    URL iconURL = getClass().getResource
+    /*URL iconURL = getClass().getResource
         ("/home/u13c11/NetBeansProjects/javaSwing/src/main/java/com/mycompany/sources/dig.png");
         ImageIcon icon = new ImageIcon(iconURL);
-        jframe.setIconImage(icon.getImage());
+        jframe.setIconImage(icon.getImage());*/
         
         JFrame.setDefaultLookAndFeelDecorated(true);
     
+        jframe.getContentPane().setBackground(new Color(255,0,0)); // paiting the backgroud of red
+        
+        
     
     
     
         
     }
+    
     public static void main(String[] args) {
         
-        JFrameClass jframe = new JFrameClass();
-        jframe.InitializingJFrame();
-        
+        JFrameClass frame = new JFrameClass();
+        frame.initializingJFrame();
     }
 }
